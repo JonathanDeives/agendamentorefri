@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Visitas</title>
+</head>
+<body>
+    <h1>Agendamento de Visitas</h1>
+    <form method="POST" action="/agendar">
+        <label>Nome da Pessoa:</label><br>
+        <input type="text" name="nome_pessoa" required><br>
+        <label>Data e Hora:</label><br>
+        <input type="datetime-local" name="data_hora" required><br>
+        <label>Endereço:</label><br>
+        <input type="text" name="endereco" required><br>
+        <label>Problema:</label><br>
+        <input type="text" name="problema" required><br>
+        <label>Forma de Pagamento:</label><br>
+        <input type="text" name="forma_pagamento" required><br>
+        <button type="submit">Agendar</button>
+    </form>
+</body>
+</html>
