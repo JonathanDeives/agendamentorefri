@@ -1,0 +1,22 @@
+-- Criar banco de dados
+CREATE DATABASE loja_refrigeracao;
+
+-- Conectar ao banco de dados
+\c loja_refrigeracao;
+
+-- Criar tabela para agendamentos
+CREATE TABLE visitas (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    data_cadastro DATE NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    problema TEXT,
+    hora TIME
+);
+
+-- Criar tabela para pagamentos
+CREATE TABLE pagamentos (
+    id SERIAL PRIMARY KEY,
+    id_cliente INT REFERENCES visitas(id),
+    metodo_pagamento VARCHAR(50) NOT NULL
+);
